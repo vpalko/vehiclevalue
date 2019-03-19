@@ -1,0 +1,26 @@
+{
+  "name": "vehiclevalue",
+  "version": "0.0.1",
+  "description": "Estimate used vehicle value",
+  "main": "src/server.js",
+  "license": "UNLICENSED",
+  "scripts": {
+    "start": "node src/server.js",
+    "test": "mocha test/*.spec.js"
+  },
+  "author": "Volodymyr Palko",
+  "dependencies": {
+    "express": "4.16.4",
+    "request": "^2.88.0",
+    "validator": "^10.8.0"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "chai-http": "^4.2.1",
+    "mocha": "^6.0.2"
+  },
+  "engines": {
+    "node": "8.9.4",
+    "npm": "5.6.0"
+  }
+}
