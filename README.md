@@ -30,6 +30,34 @@ mileage=[integer]
 
 ```
 
+* Method:
+```$xslt
+POST
+```
+
+* Request body
+
+   Required:
+```$xslt
+{
+    "value": [integer],
+    "make": [string],
+    "model": [string],
+    "age": [integer],
+    "owners": [integer]
+}
+```
+         
+   Optional:
+      
+```$xslt
+{
+    "collisions": [integer]
+    "mileage": [integer]
+}
+
+```
+
 * Success Response:
 ```$xslt
 Code: 200 
@@ -60,8 +88,22 @@ Content: {
          }
 ```
 
-* Sample Call:
+* Sample GET Call:
 
  ```$xslt
 /value?value=20000&make=toyota&model=highlander&age=12&owners=3&collisions=5&mileage=1001
+```
+
+* Sample POST Call:
+
+ ```$xslt
+{
+    "value": "20000",
+    "make": "toyota",
+    "model": "highlander",
+    "age": "12",
+    "owners": "3",
+    "collisions": "5",
+    "mileage": "5000"
+}
 ```
