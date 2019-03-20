@@ -15,15 +15,29 @@ const REDUCE_VALUE_PER_COLLISION        = 2
 const REDUCE_VALUE_MAX_COLLISIONS       = 5
 
 class VehicleData {
-    getVehicleValue(req, res) {
-        const REQUEST_PARAMS    = {
-            initialValue:       req.query.value,
-            vehiclemake:        req.query.make,
-            vehiclemodel:       req.query.model,
-            vehicleage:         req.query.age,
-            vehicleowners:      req.query.owners,
-            vehiclemileage:     req.query.mileage,
-            vehiclecollisions:  req.query.collisions
+    getVehicleValue(req, res, method) {
+        let REQUEST_PARAMS
+
+        if(method === 'GET'){
+            REQUEST_PARAMS    = {
+                initialValue:       req.query.value,
+                vehiclemake:        req.query.make,
+                vehiclemodel:       req.query.model,
+                vehicleage:         req.query.age,
+                vehicleowners:      req.query.owners,
+                vehiclemileage:     req.query.mileage,
+                vehiclecollisions:  req.query.collisions
+            }
+        } else if (method === 'POST'){
+            REQUEST_PARAMS = {
+                initialValue:       req.body.value,
+                vehiclemake:        req.body.make,
+                vehiclemodel:       req.body.model,
+                vehicleage:         req.body.age,
+                vehicleowners:      req.body.owners,
+                vehiclemileage:     req.body.mileage,
+                vehiclecollisions:  req.body.collisions
+            }
         }
 
         requestvalidator.validateRequest(REQUEST_PARAMS, (err)=>{
