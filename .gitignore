@@ -6,6 +6,8 @@ yarn-debug.log*
 yarn-error.log*
 .DS_Store
 .idea
+.idea/workspace.xml
+package-lock.json
 
 # Runtime data
 pids
