@@ -10,7 +10,7 @@ app.listen(port, (err) => {
   if (err) {
     console.log({err: err})
   } else {
-    console.log(`Listening on port: ${port}`)
+    console.log(`Server is up on port ${port}`)
   }
 })
 
