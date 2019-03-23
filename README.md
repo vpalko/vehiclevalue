@@ -107,3 +107,8 @@ Content: {
     "mileage": "5000"
 }
 ```
+
+* Heroku:
+```
+https://vpalko-vehiclevalue.herokuapp.com/value?value=20000&make=toyota&model=highlander&age=12&owners=3&collisions=5&mileage=1001
+```
