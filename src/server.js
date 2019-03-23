@@ -2,7 +2,7 @@ const express = require('express')
 const bodyParser = require("body-parser")
 const VehicleData = require('./services/vehiclevalue.js')
 const app = express()
-const port = 3004
+const port = process.env.PORT || 3004
 
 app.disable('etag');
 app.use(bodyParser.json())
@@ -10,7 +10,7 @@ app.listen(port, (err) => {
   if (err) {
     console.log({err: err})
   } else {
-    console.log(`Listening on http://localhost:${port}`)
+    console.log(`Listening on port: ${port}`)
   }
 })
 
